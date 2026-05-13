@@ -21,14 +21,12 @@ object lionel {
 	method avanzar() {
 		position = game.at((game.width() - 1).min(position.x() + 1), position.y()) 
 	}
-<<<<<<< HEAD
 	method patear(){
 		if(self.position()==pelota.position()){
 			pelota.pateada()
 		}
 		
 	}	
-=======
 
 	method tirarTaco() {
 		
@@ -37,7 +35,6 @@ object lionel {
 			 newPelota.taqueteada(izquierda)
 		}
 	}
->>>>>>> main
 	
 	method levantar() {
 	  
@@ -55,14 +52,12 @@ object pelota {
 	var property tableroDeJuego = tablero 
 	const property image="pelota.png"
 	var property position = game.at(5,5)
-<<<<<<< HEAD
 	method pateada(){
 		position = game.at((game.width() - 1).min(position.x() + 3 ), position.y())
 	}
 	method taquiteada(){
 		position = game.at((0.max(position.x()-2)),position.y())
 	}
-=======
 
 	
 	method levantar(direccion) {
@@ -93,7 +88,6 @@ object pelota {
 		}
 	}
 
->>>>>>> main
 }
 
 

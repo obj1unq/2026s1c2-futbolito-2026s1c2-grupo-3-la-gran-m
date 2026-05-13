@@ -12,16 +12,13 @@ program futbolito{
 	keyboard.enter().onPressDo({game.say(lionel, "Vamos Argentina!")})
 	keyboard.left().onPressDo({lionel.retroceder()})
 	keyboard.right().onPressDo({lionel.avanzar()})
-<<<<<<< HEAD
 	keyboard.p().onPressDo({lionel.patear()})
-=======
 	keyboard.t().onPressDo({lionel.tirarTaco()})
 	keyboard.l().onPressDo({lionel.levantar()})
 
 	//game.onTick(1200, "gravedad", { => pelota.caer() })
 
 
->>>>>>> main
 	game.start()
 
 }
