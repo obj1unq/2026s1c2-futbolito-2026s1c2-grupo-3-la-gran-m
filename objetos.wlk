@@ -7,11 +7,13 @@ object lionel {
 	
 	var property tableroDeJuego = tablero
 	var property position = game.at(3,5)
+	var property camiseta = camisetaTitular
+	
 	var property newPelota = pelota 
 
 
 	method image() {
-		return "lionel-titular.png"
+		return camiseta.image()
 	}
 
 	method retroceder() {
@@ -36,6 +38,11 @@ object lionel {
 		}
 	}
 	
+	method cambiarCamiseta(){
+		if(self.position().x()== 0){
+		camiseta.cambiarCamisetaLio()
+		}
+	}
 	method levantar() {
 	  
 	  if (tableroDeJuego.estanEnMismaPosicion(self.position(),newPelota.position())) {
@@ -90,6 +97,23 @@ object pelota {
 
 }
 
+object camisetaTitular{
+	method image() = "lionel-titular.png"
+
+	method cambiarCamisetaLio(){
+		lionel.camiseta(camisetaSuplente)
+	}
+
+}
+
+object camisetaSuplente{
+
+	method image() = "lionel-suplente.png"
+
+	method cambiarCamisetaLio(){
+		lionel.camiseta(camisetaTitular)
+	}
+}
 
 
 object tablero {
