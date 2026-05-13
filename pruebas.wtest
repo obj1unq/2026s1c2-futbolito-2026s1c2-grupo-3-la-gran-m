@@ -1,0 +1,8 @@
+import objetos.*
+describe "las camisetas" {
+  test "cambiar camiseta" {
+    lionel.position(game.at(0,5))
+    lionel.cambiarCamiseta()
+    assert.equals(camisetaSuplente, lionel.camiseta())
+  }
+}
