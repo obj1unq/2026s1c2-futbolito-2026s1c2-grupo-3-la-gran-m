@@ -1,8 +1,22 @@
 import objetos.*
+import pgmProgram.*
 describe "las camisetas" {
   test "cambiar camiseta" {
     lionel.position(game.at(0,5))
     lionel.cambiarCamiseta()
     assert.equals(camisetaSuplente, lionel.camiseta())
+  }
+}
+
+describe "lionel pateando" {
+    method initialize(){
+        game.width(15)
+	    game.height(10)
+    }
+  test "pateando la pelota" {
+    lionel.position(game.at(5,5))
+    lionel.patear()
+    lionel.patear()
+    assert.equals(game.at(8,5), pelota.position())
   }
 }
